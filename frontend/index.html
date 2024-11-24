@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Expenses Sharing App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Daily Expenses Sharing App</h1>
+
+    <!-- User Creation Form -->
+    <section>
+      <h2>Create User</h2>
+      <form id="user-form">
+        <input type="text" id="user-name" placeholder="Name" required />
+        <input type="email" id="user-email" placeholder="Email" required />
+        <input type="text" id="user-mobile" placeholder="Mobile Number" required />
+        <button type="submit">Create User</button>
+      </form>
+      <p id="user-message"></p>
+    </section>
+
+    <!-- Add Expense Form -->
+    <section>
+      <h2>Add Expense</h2>
+      <form id="expense-form">
+        <input type="number" id="expense-amount" placeholder="Total Amount" required />
+        <select id="split-method">
+          <option value="equal">Equal Split</option>
+          <option value="exact">Exact Amounts</option>
+          <option value="percentage">Percentage Split</option>
+        </select>
+        <input type="number" id="created-by" placeholder="User ID (Creator)" required />
+        <button type="submit">Add Expense</button>
+      </form>
+      <p id="expense-message"></p>
+    </section>
+
+    <!-- View Expenses -->
+    <section>
+      <h2>View Expenses</h2>
+      <button id="view-expenses">Get All Expenses</button>
+      <ul id="expenses-list"></ul>
+    </section>
+
+    <!-- Download Balance Sheet -->
+    <section>
+      <h2>Download Balance Sheet</h2>
+      <button id="download-excel">Download Excel</button>
+      <button id="download-pdf">Download PDF</button>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
